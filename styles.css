@@ -1,0 +1,201 @@
+/* Root variables for color scheme */
+:root {
+    --BACKGROUND-COLOR: #D8EFD3;      /* Light green background */
+    --PRIMARY-COLOR: #95D2B3;         /* Light green primary color */
+    --SECONDARY-COLOR: #55AD9B;       /* Darker green secondary color */
+    --TEXT-COLOR: #1B262C;            /* Dark text color */
+}
+
+
+/* Global body styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--BACKGROUND-COLOR); /* Use light green background */
+    margin: 0;
+    padding: 0;
+    color: var(--TEXT-COLOR); /* Dark text color */
+}
+
+/* Header 1 styles */
+h1 {
+    text-align: center;
+    color: var(--TEXT-COLOR); /* Dark heading color */
+}
+
+/* Styling for lists */
+#questions {
+    padding: 0 20px; /* Padding on left and right set to 20px */
+}
+
+/* Company and question list styles */
+#company-list,
+#question-list {
+    margin: 20px; /* Margin around the lists */
+    padding: 20px; /* Padding inside the lists */
+    background-color: var(--PRIMARY-COLOR); /* Use light green primary color */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Shadow effect */
+}
+
+/* Company link styles */
+.company {
+    cursor: pointer;
+    padding: 20px; /* Padding inside each company item */
+    color: var(--TEXT-COLOR); /* Dark text color */
+    text-decoration: none;
+    border-bottom: 1px solid var(--SECONDARY-COLOR); /* Use darker green for border */
+    display: block;
+}
+
+.company:hover {
+    background-color: var(--BACKGROUND-COLOR); /* Light green background on hover */
+    border-radius: 5px; /* Rounded corners on hover */
+}
+
+/* Company name styles */
+#company-name {
+    text-align: center;
+    margin-top: 10px; /* Top margin */
+    margin-bottom: 20px; /* Bottom margin */
+    font-size: 36px; /* Large font size */
+    color: var(--TEXT-COLOR); /* Dark text color */
+}
+
+/* Question list styles */
+#question-list {
+    display: none; /* Hide question list by default */
+}
+
+/* Question table styles */
+.question-table {
+    width: 100%; /* Full width */
+    border-collapse: collapse; /* Collapse borders */
+    margin: 20px; /* Margin around the table */
+    font-size: 18px; /* Font size for table content */
+    text-align: left; /* Left-aligned text */
+}
+
+.question-table thead tr {
+    background-color: var(--SECONDARY-COLOR); /* Darker green header background */
+    color: var(--TEXT-COLOR); /* Dark text color */
+    text-align: left;
+    font-weight: bold;
+}
+
+.question-table thead th,
+.question-table tbody td {
+    padding: 12px 15px; /* Padding inside table header and cells */
+}
+
+.question-table tbody tr {
+    border-bottom: 1px solid var(--SECONDARY-COLOR); /* Use darker green for border */
+}
+
+.question-table tbody tr:hover {
+    background-color: var(--BACKGROUND-COLOR); /* Light green background on hover */
+}
+
+.question-table a {
+    color: #065783; /* Green link color */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.question-table a:hover {
+    text-decoration: underline; /* Underline links on hover */
+}
+
+/* Additional styles for the question table */
+.question-table {
+    margin: 20px auto; /* Center the table horizontally */
+    border-radius: 5px 5px 0 0; /* Rounded top corners */
+    overflow: hidden; /* Hide overflow content */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15); /* Shadow effect */
+}
+
+.question-table tbody tr:last-of-type {
+    border-bottom: 2px solid var(--TEXT-COLOR); /* Use dark text color for bottom border */
+}
+
+/* Header container styles */
+.header-container {
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Center align items vertically */
+}
+
+/* Sort button styles */
+.sort-button {
+    color: white; /* White text color */
+    border: none; /* No border */
+    cursor: pointer; /* Pointer cursor */
+    padding: 10px 8px 6px; /* Padding */
+    margin-left: 5px; /* Left margin */
+    font-size: 14px; /* Font size */
+    border-radius: 4px; /* Rounded corners */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+}
+
+.sort-button:hover {
+    background-color: #319785; /* Darker green on hover */
+}
+
+/* Up arrow icon */
+.sort-button.up-arrow:before {
+    content: ''; /* Empty content */
+    display: inline-block; /* Inline block element */
+    width: 0; /* No width */
+    height: 0; /* No height */
+    border-left: 5px solid transparent; /* Transparent left border */
+    border-right: 5px solid transparent; /* Transparent right border */
+    border-bottom: 8px solid white; /* White bottom border for arrow */
+    margin-right: 5px; /* Right margin */
+}
+
+/* Down arrow icon */
+.sort-button.down-arrow:before {
+    content: ''; /* Empty content */
+    display: inline-block; /* Inline block element */
+    width: 0; /* No width */
+    height: 0; /* No height */
+    border-left: 5px solid transparent; /* Transparent left border */
+    border-right: 5px solid transparent; /* Transparent right border */
+    border-top: 8px solid white; /* White top border for arrow */
+    margin-right: 5px; /* Right margin */
+}
+
+#back-button {
+    display: block; /* Display as block */
+    margin: 20px 20px; /* Margin around the button */
+    padding: 10px 20px; /* Padding inside the button */
+    background-color: var(--SECONDARY-COLOR); /* Use darker green for button background */
+    color: var(--TEXT-COLOR); /* Dark text color */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    font-weight: bold; /* Bold text */
+    font-size: 15px; /* Font size */
+    cursor: pointer; /* Pointer cursor */
+}
+
+#back-button:hover {
+    background-color: var(--BACKGROUND-COLOR); /* Light green background on hover */
+}
+
+/* Footer styles */
+footer {
+    background-color: var(--BACKGROUND-COLOR); /* Use light green for footer background */
+    padding: 10px 20px; /* Padding inside footer */
+    text-align: center; /* Center align text */
+    /* position:static; */
+    bottom: 0; /* Align to bottom */
+    width: 100%; /* Full width */
+}
+
+footer p {
+    margin: 0; /* No margin */
+    font-size: 14px; /* Font size */
+    color: var(--TEXT-COLOR); /* Dark text color */
+}
+footer p a{
+    color: inherit; /* Inherit text color from parent (removes blue/purple text color on links) */
+}
+
