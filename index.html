@@ -11,11 +11,16 @@
 <body>
     <h1>Interview Questions by Company</h1>
     <div id="company-list">
+        <!-- Search bar for company list -->
+        <input type="text" id="company-search" placeholder="🔎 Search companies..." oninput="searchCompanies()">
         <!-- Company list will be dynamically generated here -->
+
     </div>
     <div id="question-list">
         <h2 id="company-name"></h2>
+        <!-- Search bar for question list -->
         <button id="back-button">Back</button>
+        <input type="text" id="question-search" placeholder="🔎 Search questions..." oninput="searchQuestions()">  
         <ul id="questions">
             <!-- Questions will be dynamically generated here -->
         </ul>
