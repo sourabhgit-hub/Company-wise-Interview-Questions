@@ -22,6 +22,22 @@ h1 {
     color: var(--TEXT-COLOR); /* Dark heading color */
 }
 
+/* Search bar styles */
+input[type="text"] {
+    padding: 10px 20px;
+    margin: 10px 20px;
+    box-sizing: border-box;
+    border: 2px solid var(--SECONDARY-COLOR); /* Blueish border */
+    border-radius: 4px;
+    background-color: var(--BACKGROUND-COLOR); /* Darker background */
+    color: var(--TEXT-COLOR); /* Light text */
+}
+
+input[type="text"]:focus {
+    border-color: var(--TEXT-COLOR); /* Change border color on focus */
+    outline: none; 
+}
+
 /* Styling for lists */
 #questions {
     padding: 0 20px; /* Padding on left and right set to 20px */
