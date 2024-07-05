@@ -46,6 +46,42 @@ function sortQuestions(questions, criteria, order) {
     }
 }
 
+// Function to search companies
+function searchCompanies() {
+    const searchInput = document.getElementById('company-search').value.toUpperCase();
+    const companies = document.getElementById('company-list').getElementsByClassName('company');
+
+    Array.from(companies).forEach(company => {
+        const companyName = company.innerText.toUpperCase();
+        if (companyName.includes(searchInput)) {
+            company.style.display = 'block';
+        } else {
+            company.style.display = 'none';
+        }
+    });
+}
+
+// Function to search questions
+function searchQuestions() {
+    const searchInput = document.getElementById('question-search').value.toUpperCase();
+    const questions = Array.from(document.querySelectorAll('#questions tbody tr'));
+
+    questions.forEach(question => {
+        const cells = question.getElementsByTagName('td');
+        let found = false;
+        Array.from(cells).forEach(cell => {
+            if (cell.innerText.toUpperCase().includes(searchInput)) {
+                found = true;
+            }
+        });
+        if (found) {
+            question.style.display = '';
+        } else {
+            question.style.display = 'none';
+        }
+    });
+}
+
 // Function to display questions with optional sorting criteria
 function displayQuestions(companyName, questions, sortCriteria = null) {
     currentCompanyName = companyName;
